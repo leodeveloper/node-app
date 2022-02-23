@@ -6,16 +6,12 @@ let winningnumber = getRandomInt(1,100);
 //console.log(winningnumber);
 
 function  main() {
-    let guess = getRandomInt(1,100);
-    let guesscount = 0;
-    let guesslist = [];
-    while (guess != winningnumber) {
-        guesscount++;
-        guesslist.push(guess);
-        guess = getRandomInt(1,100);
+    let guessNumber = 0;
+    while (guessNumber != winningnumber) {
+        guessNumber++;
     }
-    console.log(guesslist);
-    console.log(guesscount);
+    console.log(guessNumber);
+    console.log(winningnumber);
 }
 
 main();
