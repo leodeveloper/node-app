@@ -5,7 +5,7 @@ const app = express();
 
 
 
-app.get('/three', (req, res) => {
+app.get('/guess', (req, res) => {
   const child = fork('./index.js');
   child.send('run');
   child.on('message', (guessNumber) => {
