@@ -10,8 +10,16 @@ function  main() {
     while (guessNumber != winningnumber) {
         guessNumber++;
     }
-    console.log(guessNumber);
-    console.log(winningnumber);
+    //console.log(guessNumber);
+    //console.log(winningnumber);
+    return guessNumber;
 }
 
-main();
+//main();
+
+process.on('message', (message) => {
+    if (message === 'run') {
+      const guessNumber = main();
+      process.send(guessNumber);
+    }
+  });
